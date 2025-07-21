@@ -34,22 +34,22 @@ $mediaPonderada = (
     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="get" class="mb-4">
         <div class="mb-3">
             <label for="TxtN1" class="form-label">Número 1:</label>
-            <input type="number" name="num1" id="TxtN1" class="form-control" value="<?php echo $numero1; ?>">
+            <input type="number" name="num1" id="TxtN1" class="form-control" min="1" value="<?php echo $numero1; ?>">
         </div>
 
         <div class="mb-3">
             <label for="TxtN2" class="form-label">Número 2:</label>
-            <input type="number" name="num2" id="TxtN2" class="form-control" value="<?php echo $numero2; ?>">
+            <input type="number" name="num2" id="TxtN2" class="form-control" min="1" value="<?php echo $numero2; ?>">
         </div>
 
         <div class="mb-3">
             <label for="TxtN3" class="form-label">Número 3:</label>
-            <input type="number" name="num3" id="TxtN3" class="form-control" value="<?php echo $numero3; ?>">
+            <input type="number" name="num3" id="TxtN3" class="form-control" min="1" value="<?php echo $numero3; ?>">
         </div>
 
         <div class="mb-3">
             <label for="TxtN4" class="form-label">Número 4:</label>
-            <input type="number" name="num4" id="TxtN4" class="form-control" value="<?php echo $numero4; ?>">
+            <input type="number" name="num4" id="TxtN4" class="form-control"  min="1"value="<?php echo $numero4; ?>">
         </div>
 
         <button type="submit" class="btn btn-primary">Calcular</button>
