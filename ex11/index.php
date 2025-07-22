@@ -11,8 +11,6 @@
 <?php 
     $antigo = $_GET["preco"] ?? null;
     $por = $_GET["porcent"] ?? null;
-
-    $novo = (($antigo * $por) / 100) + $antigo;
 ?>
 
 <div class="container">
@@ -34,6 +32,7 @@
 
     <?php 
         if (isset($antigo) && isset($por)) {
+            $novo = (($antigo * $por) / 100) + $antigo;
             echo "<div class='alert alert-success'>Novo preço = <strong>R$ " . number_format($novo, 2, ",", ".") . "</strong></div>";
         } else {
             echo "<div class='alert alert-warning'>Valores não informados.</div>";
