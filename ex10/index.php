@@ -35,11 +35,14 @@
                 echo '<div class="alert alert-danger">O ano de nascimento não pode ser maior que o ano atual.</div>';
             } else {
                 $idade = $anoInformado - $anoNascimento;
-                echo "<div class='alert alert-success'>";
-                echo "<p>Ano de nascimento: <strong>$anoNascimento</strong></p>";
-                echo "<p>Ano informado: <strong>$anoInformado</strong></p>";
-                echo "<p>Você terá <strong>$idade</strong> anos em $anoInformado.</p>";
-                echo "</div>";
+                  echo <<<HTML
+                <div class='alert alert-success'>
+                 <p>Ano de nascimento: <strong>$anoNascimento</strong></p>
+                 <p>Ano informado:  <strong>$anoInformado</strong></p>
+                <p>Você terá <strong>$idade</strong> anos    em         $anoInformado.</p>
+                </div>
+                HTML;
+
             }
         }
     ?>
