@@ -31,11 +31,15 @@
     </form>
 
     <?php 
-        if (isset($antigo) && isset($por)) {
+        if ( !empty($antigo) && !empty($por)) {
             $novo = (($antigo * $por) / 100) + $antigo;
             echo "<div class='alert alert-success'>Novo preço = <strong>R$ " . number_format($novo, 2, ",", ".") . "</strong></div>";
+        }elseif ($antigo==0 || $por==0) {
+
+             echo "<div class='alert alert-warning'>Valores não podem ser  zeros.</div>";
+
         } else {
-            echo "<div class='alert alert-warning'>Valores não informados.</div>";
+            echo "<div class='alert alert-danger'>Valores não informados.</div>";
         }
     ?>
 </div>
